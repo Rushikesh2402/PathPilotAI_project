@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PathPilot AI</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+    <h1>PathPilot AI</h1>
+    <p>Goal. Plan. Track. Adapt.</p>
+</header>
+
+<main>
+    <section class="panel">
+        <h2>Create Your Roadmap</h2>
+        <form id="goalForm">
+            <label for="goal">Your goal</label>
+            <textarea id="goal" name="goal" required
+            placeholder="Example: Prepare for coding placements and improve DSA"></textarea>
+
+            <label for="deadline">Deadline</label>
+            <input id="deadline" name="deadline" type="date"
+            min="{{ today }}" required>
+
+            <label for="daily_hours">Available hours per day</label>
+            <input id="daily_hours" name="daily_hours" type="number"
+            min="1" max="24" step="0.5" value="2" required>
+
+            <button type="submit">Generate Roadmap</button>
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>Your Personalized Roadmap</h2>
+        <div id="result">Your generated plan will appear here.</div>
+    </section>
+</main>
+
+<footer>PathPilot AI | Adaptive Goal Planning System</footer>
+<script src="/static/script.js"></script>
+</body>
+</html>
